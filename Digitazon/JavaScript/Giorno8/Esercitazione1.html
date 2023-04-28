@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Ex 1
+    creare la funzione diffArray che prende in ingresso due array.
+    Gli array dovranno contenere da 3 a 8 numeri.
+    All'interno della funzione trovare il numero più grande del primo array e il numero più piccolo del secondo array.
+    La funzione restituisce la differenza tra il primo numero e il secondo. 
+    Stampare il risultato in output. -->
+
+    <script>
+        function countNum(string) {
+            let count = 0
+            for (let i = 0; i < string.length; i++) {
+                if (!isNaN(string[i])) {
+                    count++
+                }
+                
+            }
+            return count
+        }
+
+        function diffArray(array1, array2) {
+            let max = array1[0]
+            let min = array2[0]
+            // let a =countNum(array1)
+            if ((countNum(array1) >= 3 && countNum(array1) <= 8) && countNum(array2) >= 3 && countNum(array2) <= 8) {
+                for (let i = 1; i < array1.length; i++) {
+                    if (max <= array1[i]) {
+                        max = array1[i]
+                    }
+                }
+                for (let i = 1; i < array2.length; i++) {
+                    if (min >= array2[i]) {
+                        min = array2[i]
+                    }
+                    
+                }
+            }
+            else console.log('not enough numbers');
+
+            return max - min
+            
+        }
+        let a = [ 1, 2, 3, 6, 7, 'asjiksadjfkjashdjkh', 4, 10]
+        let b = [3, 4, 'restgf',8, 123]
+        console.log(diffArray(a, b));
+        
+    </script>
+
+</body>
+</html>

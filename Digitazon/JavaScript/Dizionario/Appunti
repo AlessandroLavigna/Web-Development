@@ -1,0 +1,17 @@
+Falsey = sono i valori "Null" "False" "0" "Undefined" "NaN" "stringa vuota"
+
+per capire se un if è true o false:
+
+
+tabella or "||"  T || T = T 
+                 T || F = T     (con l`or se uno dei due lati è true è un booleano true)
+                 F || T = T     
+                 F || F = F
+
+tabella or "&&"  T && T = T 
+                 T && F = F     (con l`and se uno dei due è falsey ritorna un booleano false)
+                 F && T = F 
+                 F && F = F
+
+
+differenza tra obj e map: 

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function biggerString(a, b) {
+            if (a.length > b.length) {
+                return a
+            }
+            else (b.length > a.length)
+            return b
+
+        }
+
+        let a = ['ciao', 'addio']
+        let b = ['ciao']
+
+        console.log(biggerString(a, b));
+    </script>
+
+
+
+
+    <!-- Ex 1
+--------------------------------------------------------------------
+creare una funzione formatDate che, presi in ingresso un numero, una stringa e un numero, stampi una data formattata.
+Il primo numero rappresenta l'anno, la stringa il nome del mese e il secondo numero il giorno.
+es: formatDate(2023, 'maggio', 17)   stampa "17-05-2023" -->
+
+    <script>
+
+        // function formatDate(y, m, d) {
+
+        //     let months = new Map([
+        //         ['gennaio', 00],
+        //         ['febbraio', 01],
+        //         ['marzo', 02],
+        //         ['aprile', 03],
+        //         ['maggio', 04],
+        //         ['giugno', 05],
+        //         ['luglio', 06],
+        //         ['agosto', 07],
+        //         ['settembre', 08],
+        //         ['ottobre', 09],
+        //         ['novembre', 10],
+        //         ['dicembre', 11]
+        //     ])
+
+        //     if (months.has(m)) {
+        //         let mese = months.get(m);
+        //         let getMonth
+        //         console.log(mese);
+        //         const data = new Date(y, mese, d)
+
+        //         if (data.getMonth() < 10) getMonth = '0' + data.getMonth();
+
+        //         console.log(data.getDate() + '-' + getMonth + '-' + data.getFullYear());
+        //         return 0
+        //     }
+
+
+
+        // }
+
+        // let year = 2023
+        // let mesi = 'maggio'
+        // let day = 17
+
+
+        // console.log(formatDate(year, mesi, day));
+
+
+        {
+    function formatDate(y,m,d){ // i parametri sono rispettivamente anno, mese, giorno
+    let res='' // creo una variabile che mi servirà per assemblare la data
+    let months=new Map([ // mi creo una mappa per tradurre il mese in numerico
+        ['gennaio','0'], // parto da 0 perchè nelle date gennaio è 0 , dicembre 11
+        ['febbraio','1'],
+        ['marzo','2'],
+        ['aprile','3'],
+        ['maggio','4'],
+        ['giugno','5'],
+        ['luglio','6'],
+        ['agosto','7'],
+        ['settembre','8'],
+        ['ottobre','9'],
+        ['novembre','10'],
+        ['dicembre','11']
+    ])
+
+    if(months.has(m.toLowerCase())){ //controllo la variabile m ha un valore che corrisponde ad una chiave della mappa
+        let month=months.get(m) // mi prendo il valore corrispondente nella mappa
+        let date=new Date(y,month,d) //creo una data e gli passo il mese sotto forma di numero
+        formatMonth= date.getMonth()+1 // prendo il mese , ma aggiungo 1 perche nelle date gennaio è 0 
+        //ma io voglio che da qui in poi il conteggio dei mesi parta da 1
+        if(month<10){ formatMonth= '0'+ formatMonth} // controllo se il mese è di una sola cifra, nel caso aggiungo 0
+        res=date.getDate()+'-'+ formatMonth +'-'+date.getFullYear();// assemblo la data
+    }
+    return res // restituisco la stringa come valore della funzione 
+    }
+
+    let year=2024        // - queste variabili possono cambiare di valore
+    let month='dicembre' // - ma la FORMATTAZIONE della mia funzione non dovrebbe variare.
+    let day=17           // - la funzione restituisce sempre i valori corrispondenti in maniera modulare
+
+    console.log(formatDate(year,month,day)) //richiamo la funzione e gli passo rispettivamente anno, mese e giorno come argomenti
+}
+
+
+
+
+
+    </script>
+
+    <!-- Ex 2
+--------------------------------------------------------------------
+creare una funzione cmpDate che prende in ingresso 2 stringhe che rappresentano 2 date formattate nel formato americano visto a lezione.
+La funzione estrapola l'anno da entrambe le date e restituisce 1 se il primo anno è maggiore del secondo, -1 viceversa e 0 se sono pari.
+Chiamare la funzione 3 volte con valori a piacere. -->
+
+    <script>
+
+    </script>
+
+    <!-- Ex 3
+--------------------------------------------------------------------
+creare una funzione getDateDay che prende in ingresso una data formattata nel formato americano visto a lezione e restituisce il giorno della settimana relativo, in parola.
+Chiamare la funzione con 3 date a piacere.
+es: getDateDay('2023-05-17')  -> 'mercoledì' -->
+
+    <script>
+
+    </script>
+
+    <!-- Ex 4
+--------------------------------------------------------------------
+dato il seguente JSON:
+
+[
+    {
+        "name": "mario",
+        "active": true,
+        "feat": {
+            "role": "protagonist"
+        }
+    },
+    {
+        "name": "luigi",
+        "active": true,
+        "feat": {
+            "role": "protagonist"
+        }
+    },
+    {
+        "name": "wario",
+        "active": false,
+        "feat": {
+            "role": "antagonist"
+        }
+    },
+    {
+        "name": "yoshi",
+        "active": false,
+        "feat": {
+            "role": "protagonist"
+        }
+    }
+]
+creare una funzione getInfo che, preso in ingresso l'array di oggetti ottenuto dal JSON, mi dice:
+- quanti protagonisti ci sono nell'array
+- quanti protagonisti attivi ci sono nell'array
+- quanti antagonisti ci sono nell'array -->
+
+    <script>
+
+    </script>
+
+    <!-- Ex 5
+--------------------------------------------------------------------
+creare uno script a piacere in cui si dimostra l'uso di:
+- array di array
+- array di oggetti
+- mappe
+- set
+- funzione che accetta una funzione
+- this -->
+
+    <script>
+
+    </script>
+</body>
+
+</html>

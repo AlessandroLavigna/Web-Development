@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+// Scrivere una funzione che dato in ingresso un numero, ritorni il fattoriale di quel numero.
+// creo funzione factorial
+// creo un contatore che inizia da N
+// creo un ciclo for che parte da 1 fino a N
+// aggiungo alla variabile contatore il risultato di moltiplico i * N
+// ritorno il contatore
+
+
+
+
+
+
+function factorial(N) {
+    let contatore = N
+    for (let i = 1; i < N; i++) {
+        contatore = i * contatore
+        
+    }
+    return contatore
+}
+const Number = 5
+const NumberFact = factorial(Number)
+
+console.log(`il fattoriale di ${Number} è ${NumberFact}`);
+    </script>
+</body>
+</html>

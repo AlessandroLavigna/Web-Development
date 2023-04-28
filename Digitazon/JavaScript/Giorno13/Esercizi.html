@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        // scrivere una funzione che prende in ingressso una stringa e ritorna il numero di occorrenze di ogni singolo carrattere della stringa
+
+        function stringa(string) {
+            if (typeof string == 'string') {
+                let a = 0, b = 0, c = 0, o = 0
+                for (let i = 0; i < string.length; i++) {
+                    if (string[i] == 'a') a++
+                    if (string[i] == 'b') b++
+                    if (string[i] == 'c') c++
+                    if (string[i] == 'o') o++
+                }
+                let letter = new Map([
+                    ['a', a],
+                    ['b', b],
+                    ['c', c],
+                    ['o', o],
+                ])
+                return letter
+            }
+            
+        }
+        let x = 'abaco'
+        console.log(stringa(x));
+    </script>
+
+    <script>
+
+function ins(str) {
+    let map = new Map
+    for (let i = 0; i < str.length; i++) {
+        // console.log(i);
+        // console.log('-------');
+        let n = 0
+        for (let j = 0; j < str.length; j++) {
+            if (str[i] == str[j]) {
+                // console.log(j);
+                
+                n++
+            }
+        }
+        if (!map.has(str[i])) {
+            map.set(str[i], n)
+        }
+        
+    }
+    return map
+}
+console.log(ins('abaco'));
+
+    </script>
+
+
+
+
+<!--  scrivere una funzione che data in ingresso una stringa rimuove tutti i caratteri duplicati -->
+
+<!-- 1 creo una stringa
+     2 creo la funzione che prende la stringa
+     2.1 creo una  stringa risultato
+     3 creo un ciclo che scorre da sx a dx
+     4 con un index of capire se il carattere è contenuto dentro il risultato (index of ritorna -1 se il carattere non è presente)
+     5 se non c`è concateno il risultato con il carattere
+     6 ritorno il risultato -->
+<script>
+
+function ins(str) {
+    let map = new Map
+    for (let i = 0; i < str.length; i++) {
+          console.log(i);
+        //  console.log('-------');
+        let n = 0
+        for (let j = 0; j < str.length; j++) {
+            if (str[i] == str[j]) {
+                console.log(j);
+                console.log('-------');
+                
+                n++
+            }
+        }
+        if (!map.has(str[i])) {
+            map.set(str[i], n)
+            console.log(n);
+        }
+        
+    }
+    return map
+}
+console.log(ins('aab'));
+    
+</script>
+
+
+
+</body>
+</html>

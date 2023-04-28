@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        x = ['40', '50', '60', '70']
+
+        for (let i = x.length-1 ; i >=0; i--){
+            console.log(x[i])                 
+        }
+    </script>
+
+    <script>
+        let x = [ 'mario' , 'luigi' , 'peach' , 'daisy']
+
+        for (let i = 0; i < x.length; i++) 
+            if(x[i].charAt(x[i].length - 1) != 'o') console.log(x[i])
+            
+            // != significa diverso
+        
+    </script>
+
+    <script>
+        let names = ['mario', 'luigi', 'peach', 'daisy']
+
+        // for: significa per ognuno
+
+        for (let i = names.length-1; //inizio il ciclo e gli dico di iniziare da dove, in questo caso dal valore 0-1 ovvero l`ultimo (mario -1 = daisy)
+        i >= 0; //dico che il ciclo deve fermarsi all`elemento dell`array 0 (mario)
+        i--) { //gli sto dicendo che il ciclo deve andare in moto decrescente ovvero da 3 a 0 
+
+            let result = (names[i]).charAt(0) + names[i].charAt(names[i].length-1)
+            console.log(result.toUpperCase())
+
+        }
+
+    </script>
+
+    <script>
+
+        let lables = [ 'mario', 'stefania', 'luca', 'lee', 'johnatan' ]
+        let currentMaxLength = lables[0].length
+        let currentName = lables[0]
+        let result = [lables[0]]
+
+        for (let i = 1; i < lables.length; i++) {
+            if (lables[i].length > currentMaxLength) {
+                result = []
+                currentMaxLength = lables[i].length
+                currentName = lables[i]
+                result.push(currentName)
+            }
+
+            else if (lables[i].length == currentMaxLength){
+                currentName = lables[i]
+                result.push(currentName)
+            }
+            console.log(i + ' ' + result)
+        }
+
+        console.log(result)
+    </script>
+
+    <script>
+
+        // creare array
+        // creare una variabile che contiene la somma dei valori degli indici
+        // ciclo in cui sommo i valori dei miei indici uno alla volta
+
+        let numbers = [ 17, 5, 87, 14 ]
+        let somma = 0
+        const debug = false
+
+        for (let i = 0; i < numbers.length; i++) {  
+            // somma = somma + numbers[i]
+            somma += numbers[i]
+            if (debug) {
+                console.log(somma)
+            }  
+        }
+        console.log(somma)
+
+    </script>
+
+    <script>
+
+        // Ex 6
+
+// Date 3 stringhe con valori a piacere, stampare in output quante delle tre stringhe realizzate iniziano con la lettera 'a'
+
+         let words = ['ascoli piceno', 'bergamo', 'arona']
+         let cont = 0
+
+         for (let i = 0; i < words.length; i++) {
+             if (words[i].charAt(0) == 'a' )
+                cont += 1  //shortcut per scrivere cont = +1
+         }
+
+             console.log('ci sono' + ' ' + cont + ' stringhe che iniziano con la lettera a')
+            
+         
+
+        // let word1 = 'ascoli'
+        // let word2 = 'bergamo'
+        // let word3 = 'arona'
+        // let plus = 0
+
+        // if (word1.charAt(0) == 'a')
+        //     plus += 1
+        // if (word2.charAt(0) == 'a')
+        //     plus += 1
+        // if (word3.charAt(0) == 'a')
+        //     plus += 1
+        // console.log(plus);
+            
+        
+
+    </script>
+    
+</body>
+</html>

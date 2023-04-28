@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Ex 1:  -->
+<!-- dato un array di 4 stringhe a piacere, stampare ogni valore stringa invertito (es 'ciao' diventa 'oaic', ...) -->
+
+<script>
+    
+    let city = ['Genova', 'Foggia', 'Varese', 'Torino']
+
+    for (let i = 0; i <= city.length - 1; i++) {
+        let reverse = ' '
+        
+
+        for (let j = city[i].length -1; j >= 0 ; j--) {
+            reverse += city[i][j]  
+            
+        }
+
+        console.log(reverse);        
+    }
+</script>
+
+<!-- Ex 2:
+dato un array di 10 numeri a piacere, stampare quanti sono i numeri positivi, quelli negativi, quelli dispari e quelli pari (per trovare il resto di una divisione utilizzare l'operatore %) -->
+
+<!-- creare array con 10 numeri con le caratteristiche menzionate
+    creare let  come contatori: positivi negativi dispari pari
+    creare ciclo  crescente
+    all`interno del ciclo sviluppiamo 2 if uno per i pari e dispari e l`altro positivi e negativi
+    in ogni if incrementare il contatore corrispondente
+    stampa risultati
+     -->
+
+     <script>
+        let numbers = [5, 10, -7, 25, -30, 33, -159, -27, 154, 88, -71]
+
+        let positive = 0
+        let negative = 0
+        let even = 0
+        let odd = 0
+
+        for (let i = 0; i <= numbers.length - 1; i++) {
+
+            if (numbers[i] >= 0) {
+                positive += 1
+            } else {
+                negative += 1
+            }
+            if (numbers[i] %2 == 0) {
+                even += 1
+            } else {
+                odd += 1
+            }
+            
+            
+        }
+        console.log('i positivi sono ' + positive)
+        console.log('i negativi sono ' + negative)
+        console.log('i pari sono ' + even)
+        console.log('i dispari sono ' + odd)
+     </script>
+
+
+<!-- Ex 3:
+dato un array di 3 stringhe a piacere, stampare quante di queste stringhe iniziano con il valore 'a' e terminano con il valore '_' -->
+
+ <!-- creare array
+        creare un contatore
+        creare un ciclo crescente
+        creare un if che ci permette di verificare e contare gli elementi che rispecchiano i valori
+         -->
+
+         <script>
+            let stringhe = ['ciao', 'amic_', 'aiula']
+            let contatore = 0
+
+            for (let i = 0; i < stringhe.length ; i++) {
+                
+                if (stringhe[i].charAt(0) == 'a' && stringhe[i].charAt(stringhe[i].length - 1) == '_') {
+                    contatore += 1
+                }
+           
+            }
+            console.log( 'le stringhe che rispecchiano la consegna sono ' + contatore)
+         </script>
+<!-- Ex 4:
+data una stringa a piacere, 
+SE questa contiene una vocale, un underscore, un dollaro e un numero, stampare 'password OK', altrimenti, stampare 'password NOT OK' -->
+
+<!-- Ex 5:
+dato un array di 5 valori ETEROGENEI a piacere, stabilire:
+- quante stringhe ci sono
+- quanti numeri ci sono
+- quanti booleani ci sono
+- qual è il tipo di dato maggiormente presente nell'array -->
+
+    <script>
+        let values = [ 15, 'ciao', 'albero', true, -150, false, 'javascript']
+        let contatoreString = 0
+        let contatoreNumber = 0
+        let contatoreBoolean = 0
+
+        for (let i = 0; i < values.length; i++) {
+            if (typeof values[i] == 'string') {
+                contatoreString ++
+                
+            }
+            if (typeof values[i] == 'number') {
+                contatoreNumber ++
+                
+            }
+            if (typeof values[i] == 'boolean') {
+                contatoreBoolean ++
+                
+            }
+        }
+        console.log( contatoreString)
+        console.log(contatoreNumber)
+        console.log(contatoreBoolean)
+
+        if (contatoreString > contatoreNumber) {
+            if (contatoreString > contatoreBoolean)
+            console.log ( 'le stringhe sono il valore più presente')
+            else {
+                console.log ( 'i booleani sono il valore più presente')
+            } }
+        else {
+                if (contatoreNumber > contatoreBoolean)
+                console.log ( 'i numeri sono il valore più presente')
+            else 
+                console.log ( 'i booleani sono il valore più presente') 
+
+                    
+                }
+            
+            
+        
+    </script>
+
+
+</body>
+</html>

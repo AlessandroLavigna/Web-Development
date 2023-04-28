@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let stringa1 = 'Google'
+        let stringa2 = 'Opera'
+
+        if (stringa1.length > stringa2.length) {
+            console.log('la stringa più lunga è: ' + stringa1)
+        } else if (stringa1.length < stringa2.length) {
+            console.log('la stringa più lunga è: ' + stringa2)
+        } else {
+            console.log('le stringhe  sono uguali: ' + stringa1 + ' ' + stringa2)
+        }
+
+
+    </script>
+
+    <!-- script con meno ripetizioni di console.log -->
+
+    <script>
+        let x = 'salve'
+        let y = 'buonasera'
+        let messaggio1 = 'la stringa più lunga è: '
+        let messaggio2 = 'le stringhe sono uguali. '
+        let messaggioFinale
+
+        if (x.length > y.length) {
+            messaggioFinale = messaggio1 + x
+        } else if (x.length < y.length) {
+            messaggioFinale = messaggio1 + y
+        } else {
+            messaggioFinale = messaggio2
+        }
+
+        console.log(messaggioFinale)
+
+    </script>
+
+    <script>
+        let w = 'Mela'
+        let minus = '_'
+
+        console.log (
+            w.charAt(3) + minus +
+            w.charAt(2) + minus +
+            w.charAt(1) + minus +
+            w.charAt(0)
+        )
+
+    </script>
+
+</body>
+
+</html>

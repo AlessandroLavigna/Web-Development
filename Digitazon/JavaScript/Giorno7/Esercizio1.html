@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Ex 1
+creare una funzione compareMap che accetta in ingresso due mappe.
+La funzione restituisce true SE le due mappe sono mappe, SE hanno lo stesso numero di elementi e per le stesse chiavi, gli stessi valori. 
+Testare il funzionamento di compareMap passando due mappe diverse nella prima chiamata, e due mappe uguali nella seconda chiamata -->
+
+    <script>
+        const m1 = new Map()
+
+        m1.set('name', 'Mario')
+        m1.set('lastname', 'Rossi')
+        // console.log(m1);
+
+        const m2 = new Map()
+
+        m2.set('name', 'Mario')
+        m2.set('lastname', 'Rossi')
+        // console.log(m2);
+
+        const m3 = new Map()
+
+        m3.set('name', 'Francesco')
+        m3.set('lastname', 'Giallini')
+        m3.set('age', '32')
+        // console.log(m3);
+
+        function compareMap(p, q, d) {
+            console.log(p);
+            console.log(q);
+            console.log(d)
+
+
+            if (p instanceof Map == true && q instanceof Map == true && p.size == q.size && p.has('name') && q.has('name') == true) {
+                console.log('m1' + ' ' + 'm2' + ' ' + 'sono mappe uguali');
+            }
+            else
+                console.log('m1' + ' ' + 'm2' + ' ' + 'sono diverse');
+
+            if (p instanceof Map == true && d instanceof Map == true && p.size == d.size && p.has('name') && d.has('name') == true) {
+                console.log('m1' + ' ' + 'm3' + ' ' + 'sono mappe uguali');
+            }
+            else
+                console.log('m1' + ' ' + 'm3' + ' ' + 'sono diverse');
+
+
+
+
+        }
+
+
+        compareMap(m1, m2, m3)
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Trascrivere la stringa al contrario -->
+    <script>
+
+        let x = 'Riccardo'
+
+        function inverter(name) {
+            let result = ' '
+            for (let i = name.length - 1; i >= 0; i--) {
+                result += name[i]
+
+            }
+            return result
+
+        }
+        console.log(inverter(x));
+
+    </script>
+
+
+    <!-- Ex 2
+    data la stringa 'Riccardo'
+    realizzare l'apposita strategia per stampare in output l'ultimo carattere maiuscolo concatenato a un underscore e al primo carattere minuscolo:
+
+    O_r  -->
+
+    <script>
+
+
+        let y = 'Riccardo'
+
+        function fn(x) {
+            let result = ' '
+
+            for (let i = x.length - 1; i >= 0; i--) {
+                result += x[i]
+
+            }
+            return result
+
+        }
+        console.log(fn(y.charAt(y.length - 1).toUpperCase()) + '_' + fn(y.charAt(0).toLowerCase()));
+
+// ho messo un ciclo for inutilmente poiche` bastava prenderli con il charat
+
+    </script>
+
+
+    <!-- creare l'apposita strategia per rappresentare, tramite oggetto, uno studente. Lo studente avrà:
+idMatricola: 14
+nomeCompleto: Luigi Verdi
+voti: 6, 7, 7
+
+Stampare in output la stringa tramite apposito algoritmo:
+
+il terzo voto dello studente con id 14 (Luigi Verdi) è 7 -->
+
+    <script>
+
+        let Votazione = {
+
+            idMatricola: '14',
+            nomeCompleto: 'Luigi Verdi',
+            voti: [6, 7, 7]
+
+        }
+
+        console.log('il terzo voto dello studente con id' + ' ' + Votazione.idMatricola + ' ' + '(' + Votazione.nomeCompleto + ')' + ' ' + 'è' + ' ' + Votazione.voti[2]);
+
+    </script>
+
+    <!--  scrivere una funzione chiamata chessboard che prende in ingresso un numero l, la funzione deve stampare una scacchiera di lato l contenente '#' e ' ', opportunamente alternati -->
+
+
+    <script>
+
+        // stampare una scacchiera
+
+
+        // per stampare una riga:
+        // ricevo in ingresso l, che è la lunghezza della riga
+        // inizio con il cancelletto e lo memorizzo in RIGA
+        // ULTIMO è true
+        // ciclo da 0 a l escluso
+        // metto dentro RIGA un cerchio se ULTIMO è true
+        // oppure metto dentro RIGA un cancelletto se ULTIMO è false
+        // inverto ULTIMO
+        // finito
+
+
+        //  l = 5
+        //  RIGA #O#O#
+        //  0 -> 4
+
+        function row(l, toggle) {
+            
+            let RIGA = ''
+            for (let i = 0; i < l; i++) {
+                if (toggle) {
+                    RIGA += 'O'
+                } else {
+                    RIGA += '#'
+                }
+                toggle = !toggle
+
+            }
+            return RIGA
+        }
+
+        // disegnare la scacchiera
+        // utilizzo row chiamandolo l volte
+        // detto in altro modo: ciclo l volte e ad ogni iterazione chiamo row paddandogli l e stampo il risultato
+
+        function chessboard(l) {
+            let toggle = false
+            for (let i = 0; i < l; i++) {
+                console.log(row(l, toggle));
+                toggle = !toggle
+            }
+        }
+
+        // console.log(row(5));
+        // console.log('___________');
+        console.log(chessboard(5));
+
+    </script>
+
+
+<script>
+
+function between(a, b) {
+   const array = []
+    for(let i = a + 1; i < b; i++) {
+        array.push(i)
+    }
+    return array
+}
+
+let a = 5
+let b = 9
+
+console.log(between(a,b));
+
+</script>
+
+
+<script>
+
+function biggerString(c, d) {
+    if (c > d) {
+        return c
+    } else {
+        return d
+    }
+}
+let c = 5
+let d = 9
+
+console.log(biggerString(c, d))
+
+</script>
+
+
+</body>
+
+</html>

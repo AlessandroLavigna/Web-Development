@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Ex 1
+Dato il seguente JSON:
+[
+    {
+        "fullname": "Yoshi", "rate": [4, 5, 4, 6]
+    },
+    {
+        "fullname": "Wario", "rate": [4, 9, 6, 7]
+    },
+    {
+        "fullname": "Toad", "rate": [8, 9, 9, 8]
+    }
+]
+salvarlo in un template string, parsarlo con l'apposita strategia e stabilire algoritmicamente chi è lo studente migliore e chi è il peggiore. -->
+
+
+<script>
+    let json = `
+      [
+           {
+               "fullname": "Yoshi", "rate": [4, 5, 4, 6]},
+           {
+               "fullname": "Wario", "rate": [4, 9, 6, 7]},
+           {
+               "fullname": "Toad", "rate": [8, 9, 9, 8]
+           }
+      ]
+      `;
+      //racchiudere il la variabile come argomento tramite la classe JSON.parse()
+      const jsonObj = JSON.parse(json);
+      console.log(jsonObj);
+      console.log(jsonObj[0]);
+      console.log(jsonObj);
+      let min = 0;
+      let max = 0;
+
+      let nameBest = 0;
+      let nameWorst = 0;
+
+      console.log();
+      function mediacalc(rate) {
+        let rateMedia = 0;
+        let rSum = 0;
+        for (let x = 0; x < rate.length; x++) {
+          rSum += rate[x];
+          console.log(rate[x]);
+        }
+        rateMedia = rSum / rate.length;
+        return rateMedia;
+      }
+      for (let i = 0; i < jsonObj.length; i++) {
+        let rate = jsonObj[i].rate;
+
+        let mid = mediacalc(rate);
+        console.log(mid);
+        if (mid > max) {
+          max = mid;
+          nameBest = jsonObj[i].fullname;
+        }
+        if (mid < min || i == 0) {
+          min = mid;
+          nameWorst = jsonObj[i].fullname;
+        }
+
+        console.log("---------------------------------------");
+      }
+      console.log(
+        ` il player ${nameBest} ha la media di ${max} maggiore e il player ${nameWorst} ha la media di ${min} peggiore `
+      );
+</script>
+
+<!-- Ex 2
+Creare una funzione parseShape che prende in ingresso un oggetto che abbia questo template:
+{ x: number, y: number, name: string }
+e produca un ouput relativo ad area e perimetro, in base al valore della proprietà name che stabilisce il tipo di figura geometrica in uso.
+Richiamare la funzione due volte con:
+
+const quadrato = {x: 5, x:4, shape: 'square'}
+const rettangolo = {x: 5, x:4, shape: 'rectangle'}
+per stampare area e perimetro di quadrato e rettangolo. -->
+
+<script>
+
+const quadrato = {x: 5, y:5, shape: 'square'}
+const rettangolo = {x: 5, y:4, shape: 'rectangle'}
+
+function parseShape(object) {
+    
+}
+    
+</script>
+
+</body>
+</html>

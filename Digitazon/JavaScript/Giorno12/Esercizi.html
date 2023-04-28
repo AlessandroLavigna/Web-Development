@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // funzione che dato un array somma tutti i numeri dell`array
+
+        function sum(arr) {
+            let tot = 0
+
+            for (let i = 0; i < arr.length; i++) {
+                tot += arr[i]
+            }
+            return tot
+        }
+
+        function sot(arr) {
+            let tot = 0
+
+            for (let i = 0; i < arr.length; i++) {
+                tot -= arr[i]
+            }
+            return tot
+        }
+
+        function molt(arr) {
+            let tot = 0
+
+            for (let i = 0; i < arr.length; i++) {
+                tot *= arr[i]
+            }
+            return tot
+        }
+
+        let a1 = [2, 4, 6, 8, 10]
+
+        function x(arr , op) {
+            let tot = 0
+
+            for (let i = 0; i < arr.length; i++) {
+                tot = op(arr[i] ,tot)
+            }
+            return tot
+        }
+
+        
+    </script>
+</body>
+
+</html>

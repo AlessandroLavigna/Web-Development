@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+
+// This può essere chiamato solo all`interno di un oggetto o in una funzione utilizzando .call
+
+        let student = {
+            'name': 'mario rossi',
+            'age': 10,
+            'sayHello': function () {
+                console.log('ciao mi chiamo ' + this.name)
+            },
+            'votes': [1, 2, 34],
+            'point': {
+                'x': 10, 'y': 20, 'z': {
+                    'h': {
+                        'z': 100
+                    }
+                }
+            }
+        }
+
+        student.sayHello()
+
+        function fn() {
+            console.log('valore: ' + this.innerWidth)
+        }
+
+        function fn2() {
+            console.log('valore: ' + this.name)
+        }
+
+        console.log(window.innerWidth)
+
+        fn2()     // chiamante: window         
+        fn2.call(student) // chiamante: student
+
+
+        console.log('    ');
+
+        console.log(student.point.z.h.z)
+
+        
+    </script>
+
+</body>
+
+</html>

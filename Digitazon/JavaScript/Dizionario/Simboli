@@ -1,0 +1,51 @@
+
+                                    OPERATORI OPERAZIONI
+
+                OPERATORE	                                                DESCRIZIONE
+
+                    +	                                                     Addizione
+                    -	                                                    Sottrazione
+                    *	                                                    Moltiplicazione
+                    **	                                                     Esponente
+                    /	                                                     Divisione
+                    %	                                                     Modulo
+                    ++	                                                    Incremento
+                    --	                                                    Decremento
+
+
+
+                                    OPERATORI SHORTCUT
+
+                OPERATORE	                                               DESCRIZIONE
+
+                    =	                                                    Uguale 
+                    +=	                                             Shortcut di x = x + y 
+                    -=	                                             Shortcut di x = x - y 
+                    *=	                                             Shortcut di x = x * y
+                    /=	                                             Shortcut di x = x / y 
+                    %=	                                             Shortcut di x = x % y 
+                    **=	                                             Shortcut di x = x ** y 
+
+
+                                 OPERATORI DI COMPARAZIONE
+
+                OPERATORE	                                               DESCRIZIONE
+
+                   ==	                                                    Uguale a
+                   ===	                                            Uguale valore ed Uguale tipologia
+                   !=	                                                    Diverso
+                   !==	                                            Diverso valore e Diversa tipologia
+                   >	                                                   Maggiore di
+                   <	                                                   Minore di
+                   >=	                                               Maggiore Uguale di
+                   <=	                                               Minore Uguale di
+                   ?	                                               Operatore Ternario
+
+
+                                    OPERATORI LOGICI 
+
+                OPERATORE	                                               DESCRIZIONE
+
+                  &&	                                                   Operatore E
+                  ||	                                                 Operatore oppure
+                  !	                                                     Operatore NO

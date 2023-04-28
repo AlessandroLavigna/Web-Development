@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- /*
+    Ex 1
+    
+    Utilizzando un apposita strategia e utilizzando il ciclo WHILE, stampare i numeri da 20 a 15 (scalando) omettendo il numero 19
+    */ -->
+
+    <script>
+
+        let Numbers = 20
+
+        while (Numbers >= 15) {
+            if (Numbers != 19) {
+                console.log(Numbers);
+            }
+            Numbers--
+        }
+        console.log('     ');
+
+    </script>
+
+    <!-- /*
+Ex 2
+
+Creare un array di 5 parole.
+Iterare su questo array in 2 modi.
+PRIMA con un while, per stampare tutte le singole parole nell'array MAIUSCOLE. In questo caso, vogliamo ciclare l'array in senso invertito.
+
+DOPO con un foreach, per stampare tutte le parole dell'array in ordine
+*/ -->
+
+    <script>
+
+        let w = ['ciao', 'buongiorno', 'addio', 'buonasera', 'arrivederci']
+        let i = w.length - 1
+
+        while (w[i]) {
+            // if (w[i].toLowerCase()) {                  INUTILE
+                console.log(w[i].toUpperCase());
+            // }
+            i--
+        }
+
+        console.log('     ');
+
+        w.forEach(words => console.log(words))
+
+        console.log('     ');
+
+
+    </script>
+
+</body>
+
+</html>
