@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+// 1 - Trova chi spende piu’ e chi spende meno
+// Vi viene fornita una stringa che rappresenta le spese di ogni reparto della vostra societa’, la
+// richiesta e’ che troviate il nome del reparto che spende di più e quello che spende meno,
+// con i relativi importi totali.
+// Segue un esempio di questa stringa:
+// `
+// Cancelleria
+// 500
+// 40
+// 60
+
+// Servizi igienici
+// 1000
+// 1
+// 200
+
+// Vendite
+// 0
+// `
+// Dovete scrivere quindi una funzione che data in ingresso una stringa simile a quella data sia
+// in grado di sommare tutti gli importi e ritornare quanto richiesto, cio’ che puo’ cambiare sono
+// i nomi e il numero dei reparti e gli importi, la struttura rimarra’ la stessa.
+// In questo esempio andrebbe ritornato un risultato di questo tipo:
+// [{
+//     "reparto": "Servizi igienici",
+//     "spesa": 1201
+// }, {
+//     "reparto": "Vendite",
+//     "spesa": 0
+// }]
+
+// PSEUDOCODICE:
+// 1. scrivere la stringa Spese
+// 2. usare lo split per inglobarlo in un unico array
+// 3. creare la variabile sum con valore 0
+// 4. creare una funzione arraysplit 
+// 5. creare una variabile reparto con array vuoto
+// 6. creare un if che va ad inserire ogni elemento diverso da " " all`interno della variabile reparto ed un else if che interrompe il processo appena incontra uno spazio vuoto
+// 
+
+const spese = `
+Cancelleria 
+500 
+40 
+60 
+
+Servizi igienici 
+1000 
+1 
+200 
+
+Vendite 
+0
+`
+let a = spese.split("\n")
+
+
+function arraysplit(a) {
+    let reparto = []
+    let sum = 0
+            for (let i = 0; i < a.length; i++) {
+                console.log(a[i]);
+                if (a[i] !== " ") {
+                    reparto += a[i]
+                }
+                else if (a[i] === " ") {
+                    break;
+                }
+                
+                
+            }
+            return reparto
+    
+}
+
+console.log(arraysplit(a));
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 2 - Oh, non puoi farci niente. Siamo tutti pazzi qui.
+Scrivere una funzione che sia in grado di dire se una data stringa in ingresso sia o meno
+“pazza”.
+Una stringa e’ “pazza” se:
+● non ha un soggetto, un soggetto puo’ essere solo: “Lui”, “Lei”, “Egli”, “Ella”
+● finisce con “?!?”
+● contiene la stringa “Cthulhu”
+● inizia e finisce con una parola che finisce in “are”, o “ere”, o “ire”
+● inizia con della punteggiatura, quindi con uno tra “,.!?:;-~”
+Basta uno dei suddetti “requisiti di pazzia” per rendere una frase “pazza”; a meno che la
+stringa contenga una di queste stringhe, in quel caso la stringa non e’ mai “pazza”:
+● Church
+● mare
+Esempi di stringhe pazze:
+● .Quando guardi a lungo nell’abisso, l’abisso ti guarda dentro.
+● Andare a rimirare
+Esempi di stringhe non pazze:
+● Lui e’ pazzo.
+● ~ Pensava sempre al mare come a la mar, come lo chiamano in spagnolo quando lo
+amano ~
+● ~ Papa’, come sta Church? ~ -->
+
+    <script>
+
+        // PSEUDOCODICE:
+        // 1. Creare la stringa string
+        // 2. Creare la funzione MadnessVerificator che prende in ingresso la stringa string
+        // 3. trasformare la stringa in un array per indicare meglio gli elementi nei futuri if
+        // 4. Creare la variabile NotMad per indicare se l`elemento sia true negli if
+        // 5 Creare la variabile Saint per indicare le stringhe che sono per forza vere con un false
+        // 6. Creare un ciclo for per analizzare ogni singolo elemento dell`array
+        // 7. verificare con gli if se vi è un soggetto o la parola "Cthulhu" e con un altro if se il primo ed ultimo elemento finiscano con "are", "ere" o "ire"
+        // 8. fuori dal ciclo for controllo con un if se l`ultimo elemento dell`array finisce con i simboli "?!?" o se inizia con i simboli elencati nella consegna
+        // 9. creare un if che mi indichi con i true e false quando deve stampare la stringa
+        // 10. creare un else che va ad indicare i casi in cui NotMad è false e Saint è false
+        // 11. fare i console.log della funzione con la stringhe
+
+        let string = 'Lui è pazzo ~'
+        let string2 = 'andare con lui è da pazzi da legare'
+        let string3 = 'andare con lui al mare è da pazzi da legare'
+
+        function MadnessVerificator(string) {
+            let arr = string.split(" ")
+            let NotMad = true
+            let Saint = false
+            let Errore = "stringa sbagliata"
+
+            for (let i = 0; i < arr.length; i++) {
+
+
+                if (arr[i] !== "Lui" && arr[i] !== "Lei" && arr[i] !== "Egli" && arr[i] !== 'Ella' && arr[i] == "Cthulhu") {
+                    NotMad = false
+
+                }
+                if (arr[0].slice(-3) == "are" && arr[arr.length - 1].slice(-3) == "are" || arr[0].slice(-3) == "ere" && arr[arr.length - 1].slice(-3) == "ere" || arr[0].slice(-3) == "ire" && arr[arr.length - 1].slice(-3) == "ire") {
+                    NotMad = false
+                }
+                if (arr[i] == "Church") {
+                    Saint = true
+                }
+                if (arr[i] == "mare") {
+                    Saint = true
+                }
+
+            }
+            if (arr[arr.length - 1] == "?!?") {
+                NotMad = false
+
+            }
+            if (arr[0] == "?" || arr[0] == "!" || arr[0] == "," || arr[0] == "." || arr[0] == ":" || arr[0] == ";" || arr[0] == "-" || arr[0] == "~") {
+                NotMad = false
+            }
+
+
+            if (NotMad == true || NotMad == false && Saint == true) {
+                return string
+
+            }
+            else {
+                return Errore
+            }
+
+
+
+        }
+        console.log(MadnessVerificator(string));
+        console.log(MadnessVerificator(string2));
+        console.log(MadnessVerificator(string3));
+
+    </script>
+</body>
+
+</html>
