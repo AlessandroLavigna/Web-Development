@@ -1,4 +1,15 @@
 cos`è lo shadowing?
+
+    Quando due elementi di programmazione condividono lo stesso nome, uno di essi può nascondersi, o ombreggiatura, l'altro. In tale situazione, l'elemento ombreggiato non è disponibile per riferimento; Al contrario, quando il codice usa il nome dell'elemento, il compilatore Visual Basic lo risolve nell'elemento shadowing.
+
 cosa sono i valori falsey?
-cos`è lo scoop?
+
+    Un valore falsy è qualcosa che restituisce FALSE, ad esempio quando si controlla una variabile. Ci sono solo sei valori falsy in JavaScript: undefined, null, NaN, 0, "" (stringa vuota) e false
+
+cos`è lo scope?
+
+     lo scope determina l'ambito entro il quale quell'identificatore esiste e/o è accessibile
+
 qual è la differenza tra for e while?
+
+    A differenza di for(), il ciclo while() non prevede l'utilizzo di alcun contatore ma semplicemente l'indicazione di una condizione di terminazione: il ciclo terminerà non appena la condizione impostata si realizza.
